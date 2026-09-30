@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.login-page {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 45px 25px;
+    background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.08), transparent 35%), #0d0d0d;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 1050px;
+    min-height: 590px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #111111;
+    border: 1px solid #3a3018;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+}
+
+.login-art-section {
+    position: relative;
+    min-height: 590px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.72)), url("../images/Madhubani.webp") center / cover no-repeat;
+}
+
+.login-art-section::before {
+    content: "";
+    position: absolute;
+    inset: 25px;
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    pointer-events: none;
+}
+
+.art-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.13), transparent 45%);
+}
+
+.art-content {
+    position: relative;
+    z-index: 2;
+    max-width: 380px;
+    padding: 40px;
+    text-align: center;
+}
+
+.art-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #D4AF37;
+    color: #D4AF37;
+    font-size: 30px;
+    transform: rotate(45deg);
+}
+
+.art-icon i {
+    transform: rotate(-45deg);
+}
+
+.art-content h1 {
+    margin: 0 0 15px;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 38px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.art-content p {
+    margin: 0 auto;
+    color: #d5d5d5;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.art-line {
+    width: 70px;
+    height: 1px;
+    margin: 25px auto;
+    background: #D4AF37;
+}
+
+.art-content span {
+    color: #D4AF37;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.art-content span i {
+    margin: 0 8px;
+    font-size: 8px;
+}
+
+.login-form-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 55px;
+    background: #111111;
+}
+
+.login-form-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-heading {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.heading-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #3a3018;
+    color: #D4AF37;
+    font-size: 18px;
+}
+
+.login-heading h2 {
+    margin: 0 0 8px;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.login-heading p {
+    margin: 0;
+    color: #999999;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 9px;
+    color: #d5d5d5;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-group label i {
+    margin-right: 7px;
+    color: #D4AF37;
+}
+
+.input-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border: 1px solid #393939;
+    background: #0d0d0d;
+    transition: 0.25s ease;
+}
+
+.input-box:focus-within {
+    border-color: #D4AF37;
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.08);
+}
+
+.input-box > i {
+    width: 48px;
+    text-align: center;
+    color: #777777;
+    font-size: 14px;
+}
+
+.input-box input {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 12px 0 0;
+    background: transparent;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.input-box input::placeholder {
+    color: #666666;
+}
+
+.password-toggle {
+    width: 45px;
+    height: 100%;
+    border: none;
+    background: transparent;
+    color: #777777;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.password-toggle:hover {
+    color: #D4AF37;
+}
+
+.field-error {
+    display: block;
+    min-height: 16px;
+    margin-top: 5px;
+    color: #d96c63;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+}
+
+.login-message {
+    display: none;
+    margin-bottom: 18px;
+    padding: 11px 13px;
+    border: 1px solid #3a3018;
+    background: #18150d;
+    color: #D4AF37;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.login-message.error {
+    display: block;
+    border-color: #5a2925;
+    background: #1b100f;
+    color: #e58a82;
+}
+
+.login-message.success {
+    display: block;
+    border-color: #4a3d18;
+    background: #17150d;
+    color: #D4AF37;
+}
+
+.login-button {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border: 1px solid #D4AF37;
+    background: #D4AF37;
+    color: #0d0d0d;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.login-button:hover {
+    background: #E5C55A;
+    border-color: #E5C55A;
+    transform: translateY(-1px);
+}
+
+.login-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.signup-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 25px;
+    color: #777777;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+.signup-link a {
+    color: #D4AF37;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.signup-link a:hover {
+    color: #E5C55A;
+}
+
+.signup-link a i {
+    margin-left: 4px;
+}
+
+.back-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 25px;
+    color: #777777;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    transition: 0.2s ease;
+}
+
+.back-home:hover {
+    color: #D4AF37;
+}

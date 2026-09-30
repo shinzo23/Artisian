@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Artisian</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+
+<body>
+    <aside class="admin-sidebar">
+        <div class="admin-logo">
+            <i class="fa-solid fa-palette"></i>
+            <span>ARTISIAN</span>
+        </div>
+        <div class="admin-role">
+            <i class="fa-solid fa-user-shield"></i>
+            <span>Administrator</span>
+        </div>
+        <nav class="admin-nav">
+
+            <button class="admin-nav-item active" data-section="dashboard">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span>
+            </button>
+
+            <button class="admin-nav-item" data-section="products">
+                <i class="fa-solid fa-paintbrush"></i>
+                <span>Products</span>
+            </button>
+
+            <button class="admin-nav-item" data-section="orders">
+                <i class="fa-solid fa-box"></i>
+                <span>Orders</span>
+            </button>
+
+            <button class="admin-nav-item" data-section="users">
+                <i class="fa-solid fa-users"></i>
+                <span>Users</span>
+            </button>
+
+            <button class="admin-nav-item" data-section="add-painting">
+                <i class="fa-solid fa-plus"></i>
+                <span><a href="./add-products.html">Add Painting</a></span>
+            </button>
+
+            <a href="./index.html" class="admin-nav-link">
+                <i class="fa-solid fa-store"></i>
+                <span>Back to Store</span>
+            </a>
+
+        </nav>
+
+        <button id="logoutButton" class="admin-logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Sign Out</span>
+        </button>
+
+    </aside>
+
+    <main class="admin-main">
+
+        <header class="admin-header">
+            <div>
+                <p class="admin-header-label">ADMIN PANEL</p>
+                <h1 id="pageTitle">Dashboard</h1>
+            </div>
+            <div class="admin-profile">
+                <div class="admin-profile-icon">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <div>
+                    <span>Welcome</span>
+                    <strong id="adminName">Administrator</strong>
+                </div>
+            </div>
+        </header>
+
+        <section id="dashboardSection" class="admin-section active">
+
+            <div class="section-heading">
+                <p>OVERVIEW</p>
+                <h2>Store Dashboard</h2>
+            </div>
+
+            <div class="dashboard-cards">
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon">
+                        <i class="fa-solid fa-paintbrush"></i>
+                    </div>
+
+                    <div>
+                        <span>Paintings</span>
+                        <strong id="productCount">-</strong>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon">
+                        <i class="fa-solid fa-box"></i>
+                    </div>
+
+                    <div>
+                        <span>Orders</span>
+                        <strong id="orderCount">-</strong>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div>
+                        <span>Registered Users</span>
+                        <strong id="userCount">-</strong>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="admin-welcome-card">
+
+                <div class="welcome-icon">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
+
+                <div>
+                    <h3>Welcome to Artisian</h3>
+                    <p>Manage paintings, orders and registered users from the administration panel.</p>
+                    <p class="welcome-note">Select a section from the sidebar to manage individual records.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="productsSection" class="admin-section">
+
+            <div class="section-heading">
+                <p>PAINTINGS</p>
+                <h2>Product Management</h2>
+            </div>
+            <div class="selection-card">
+                <label for="productDropdown">
+                    <i class="fa-solid fa-paintbrush"></i>
+                    Select Painting
+                </label>
+                <select id="productDropdown">
+                    <option value="">-- Select a painting --</option>
+                </select>
+            </div>
+
+            <div id="productDetails" class="record-details hidden">
+                <div class="record-image">
+                    <img id="selectedProductImage" src="" alt="Painting">
+                </div>
+                <div class="record-content">
+                    <span class="record-label">PAINTING DETAILS</span>
+                    <h3 id="selectedProductName"></h3>
+                    <div class="detail-grid">
+                        <div>
+                            <span>Product ID</span>
+                            <strong id="selectedProductId"></strong>
+                        </div>
+                        <div>
+                            <span>Category</span>
+                            <strong id="selectedProductCategory"></strong>
+                        </div>
+                        <div>
+                            <span>Price</span>
+                            <strong id="selectedProductPrice"></strong>
+                        </div>
+                        <div>
+                            <span>Available Stock</span>
+                            <strong id="selectedProductQuantity"></strong>
+                        </div>
+                    </div>
+                    <div class="description-box">
+                        <span>Description</span>
+                        <p id="selectedProductDescription"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ordersSection" class="admin-section">
+            <div class="section-heading">
+                <p>ORDERS</p>
+                <h2>Order Management</h2>
+            </div>
+            <div class="selection-card">
+                <label for="orderDropdown">
+                    <i class="fa-solid fa-box"></i>
+                    Select Order
+                </label>
+                <select id="orderDropdown">
+                    <option value="">-- Select an order --</option>
+                </select>
+            </div>
+
+            <div id="orderDetails" class="record-details simple-record hidden">
+                <div class="record-icon">
+                    <i class="fa-solid fa-box-open"></i>
+                </div>
+                <div class="record-content">
+                    <span class="record-label">ORDER DETAILS</span>
+                    <h3>Order #<span id="selectedOrderId"></span></h3>
+                    <div class="detail-grid">
+                        <div>
+                            <span>User ID</span>
+                            <strong id="selectedOrderUserId"></strong>
+                        </div>
+                        <div>
+                            <span>Total Items</span>
+                            <strong id="selectedOrderItems"></strong>
+                        </div>
+                        <div>
+                            <span>Total Amount</span>
+                            <strong id="selectedOrderTotal"></strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="usersSection" class="admin-section">
+            <div class="section-heading">
+                <p>CUSTOMERS</p>
+                <h2>User Management</h2>
+            </div>
+            <div class="selection-card">
+                <label for="userDropdown">
+                    <i class="fa-solid fa-user"></i>
+                    Select User
+                </label>
+                <select id="userDropdown">
+                    <option value="">-- Select a user --</option>
+                </select>
+            </div>
+
+            <div id="userDetails" class="record-details simple-record hidden">
+                <div class="record-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="record-content">
+                    <span class="record-label">USER DETAILS</span>
+                    <h3 id="selectedUserName"></h3>
+                    <div class="detail-grid">
+                        <div>
+                            <span>User ID</span>
+                            <strong id="selectedUserId"></strong>
+                        </div>
+                        <div>
+                            <span>Email</span>
+                            <strong id="selectedUserEmail"></strong>
+                        </div>
+                        <div>
+                            <span>User Type</span>
+                            <strong id="selectedUserType"></strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="addPaintingSection" class="admin-section">
+            <div class="section-heading">
+                <p>PRODUCT ENTRY</p>
+                <h2>Add New Painting</h2>
+            </div>
+            <div class="add-painting-placeholder">
+                <i class="fa-solid fa-paintbrush"></i>
+                <h3>Painting Entry</h3>
+                <p>Use the Add Painting section to enter a new painting into the Artisian store.</p>
+                <a href="./add-products.html" class="admin-gold-button">
+                    <i class="fa-solid fa-plus"></i>
+                    Add Painting
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./js/admin-dashboard.js"></script>
+
+</body>
+
+</html>

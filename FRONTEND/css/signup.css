@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.signup-page {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 45px 25px;
+    background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.08), transparent 35%), #0d0d0d;
+}
+
+.signup-container {
+    width: 100%;
+    max-width: 1050px;
+    min-height: 650px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #111111;
+    border: 1px solid #3a3018;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+}
+
+.signup-art-section {
+    position: relative;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.75)), url("../images/Pattachitra.jpg") center / cover no-repeat;
+}
+
+.signup-art-section::before {
+    content: "";
+    position: absolute;
+    inset: 25px;
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    pointer-events: none;
+}
+
+.art-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.12), transparent 45%);
+}
+
+.art-content {
+    position: relative;
+    z-index: 2;
+    max-width: 390px;
+    padding: 40px;
+    text-align: center;
+}
+
+.art-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #D4AF37;
+    color: #D4AF37;
+    font-size: 30px;
+    transform: rotate(45deg);
+}
+
+.art-icon i {
+    transform: rotate(-45deg);
+}
+
+.art-content h1 {
+    margin: 0 0 15px;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 38px;
+    font-weight: 500;
+}
+
+.art-content p {
+    margin: 0 auto;
+    color: #d5d5d5;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.art-line {
+    width: 70px;
+    height: 1px;
+    margin: 25px auto;
+    background: #D4AF37;
+}
+
+.art-features {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 25px;
+}
+
+.art-features div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #d5d5d5;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+.art-features i {
+    width: 22px;
+    color: #D4AF37;
+    text-align: center;
+}
+
+.signup-form-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 45px 55px;
+    background: #111111;
+}
+
+.signup-form-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.signup-heading {
+    text-align: center;
+    margin-bottom: 27px;
+}
+
+.heading-icon {
+    width: 46px;
+    height: 46px;
+    margin: 0 auto 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #3a3018;
+    color: #D4AF37;
+    font-size: 17px;
+}
+
+.signup-heading h2 {
+    margin: 0 0 7px;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 29px;
+    font-weight: 500;
+}
+
+.signup-heading p {
+    margin: 0;
+    color: #999999;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+.form-group {
+    margin-bottom: 13px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #d5d5d5;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.form-group label i {
+    margin-right: 6px;
+    color: #D4AF37;
+}
+
+.input-box {
+    position: relative;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #393939;
+    background: #0d0d0d;
+    transition: 0.25s ease;
+}
+
+.input-box:focus-within {
+    border-color: #D4AF37;
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.08);
+}
+
+.input-box > i {
+    width: 45px;
+    text-align: center;
+    color: #777777;
+    font-size: 13px;
+}
+
+.input-box input {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 8px 0 0;
+    background: transparent;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.input-box input::placeholder {
+    color: #666666;
+}
+
+.password-toggle {
+    width: 42px;
+    height: 100%;
+    border: none;
+    background: transparent;
+    color: #777777;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.password-toggle:hover {
+    color: #D4AF37;
+}
+
+.field-error {
+    display: block;
+    min-height: 14px;
+    margin-top: 3px;
+    color: #d96c63;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+}
+
+.signup-message {
+    display: none;
+    margin: 7px 0 14px;
+    padding: 10px 12px;
+    border: 1px solid #3a3018;
+    background: #18150d;
+    color: #D4AF37;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.signup-message.error {
+    display: block;
+    border-color: #5a2925;
+    background: #1b100f;
+    color: #e58a82;
+}
+
+.signup-message.success {
+    display: block;
+    border-color: #4a3d18;
+    background: #17150d;
+    color: #D4AF37;
+}
+
+.signup-button {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid #D4AF37;
+    background: #D4AF37;
+    color: #0d0d0d;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.signup-button:hover {
+    background: #E5C55A;
+    border-color: #E5C55A;
+    transform: translateY(-1px);
+}
+
+.signup-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.login-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 20px;
+    color: #777777;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+}
+
+.login-link a {
+    color: #D4AF37;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.login-link a:hover {
+    color: #E5C55A;
+}
+
+.login-link a i {
+    margin-left: 3px;
+}
+
+.back-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 17px;
+    color: #777777;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    transition: 0.2s ease;
+}
+
+.back-home:hover {
+    color: #D4AF37;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisian</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-palette"></i>
+                <span>ARTISIAN</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+
+                <div class="category-section">
+                    <button id="categoryButton" class="category-button">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <span>Categories</span>
+                        <i class="fa-solid fa-chevron-down category-arrow"></i>
+                    </button>
+
+                    <div id="categoryDropdown" class="category-dropdown">
+
+                        <a href="paintings.html" class="category-item">
+                            <i class="fa-solid fa-border-all"></i>
+                            <span>All Paintings</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="orders.html">
+                    <i class="fa-solid fa-box-open"></i>
+                    <span>My Orders</span>
+                </a>
+
+            </div>
+
+            <div class="nav-actions">
+
+                <button id="searchButton" class="nav-icon-button" title="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <a href="cart.html" class="cart-link" title="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cartCount" class="cart-count">0</span>
+                </a>
+
+                <a href="./admin-dashboard.html" id="adminDashboardLink" style="display: none;">
+                    <!-- <i class="fa-solid fa-gauge-high"></i> -->
+                    <span>Dashboard</span>
+                </a>
+
+                <div class="user-section">
+                    <button id="userButton" class="user-button">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <i class="fa-solid fa-chevron-down user-arrow"></i>
+                    </button>
+
+                    <div id="userDropdown" class="user-dropdown">
+                        <div class="logged-user">
+                            <i class="fa-solid fa-user-circle"></i>
+                            <div>
+                                <small>Welcome</small>
+                                <span id="currentUserName">User</span>
+                            </div>
+                        </div>
+
+                        <!-- <a href="orders.html">
+                            <i class="fa-solid fa-box-open"></i>
+                            <span>My Orders</span>
+                        </a> -->
+
+                        <button id="logoutButton">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <span>Logout</span>
+                        </button>
+                    </div>
+                </div>
+
+                <a href="login.html" id="loginButton" class="login-nav-button">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                </a>
+            </div>
+        </div>
+
+        <div id="searchBox" class="search-box">
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Search paintings...">
+                <button id="closeSearch" title="Close Search">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+</body>
+
+</html>

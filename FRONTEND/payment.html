@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisian</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="./js/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <main class="payment-page">
+        <div class="payment-container">
+            <div class="payment-heading">
+                <span class="section-label">SECURE CHECKOUT</span>
+                <h1>Complete Your Payment</h1>
+                <p>Complete your payment to place your painting order.</p>
+            </div>
+            <div id="paymentMessage" class="payment-message"></div>
+            <div class="payment-layout">
+                <section class="payment-card">
+                    <div class="card-heading">
+                        <div class="card-heading-icon">
+                            <i class="fa-regular fa-credit-card"></i>
+                        </div>
+                        <div>
+                            <h2>Card Details</h2>
+                            <p>Enter your card information</p>
+                        </div>
+                    </div>
+                    <form id="paymentForm">
+                        <div class="form-group">
+                            <label for="cardName">Card Holder Name</label>
+                            <div class="input-wrapper">
+                                <i class="fa-regular fa-user"></i>
+                                <input type="text" id="cardName" placeholder="Enter card holder name" autocomplete="cc-name">
+                            </div>
+                            <span class="field-error" id="cardNameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number</label>
+                            <div class="input-wrapper">
+                                <i class="fa-regular fa-credit-card"></i>
+                                <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" inputmode="numeric" autocomplete="cc-number">
+                            </div>
+                            <span class="field-error" id="cardNumberError"></span>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiryDate">Expiry Date</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-calendar"></i>
+                                    <input type="text" id="expiryDate" placeholder="MM/YY" maxlength="5" inputmode="numeric" autocomplete="cc-exp">
+                                </div>
+                                <span class="field-error" id="expiryDateError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-lock"></i>
+                                    <input type="password" id="cvv" placeholder="123" maxlength="4" inputmode="numeric" autocomplete="cc-csc">
+                                </div>
+                                <span class="field-error" id="cvvError"></span>
+                            </div>
+                        </div>
+                        <div class="secure-payment">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <div>
+                                <strong>Secure Payment</strong>
+                                <span>Your card details are not stored by Artisian.</span>
+                            </div>
+                        </div>
+                        <button type="submit" id="payButton" class="pay-button">
+                            <i class="fa-solid fa-lock"></i>
+                            <span>Pay ₹<span id="payButtonAmount">0</span></span>
+                        </button>
+                    </form>
+                    <a href="cart.html" class="back-cart">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Back to Cart
+                    </a>
+                </section>
+
+                <aside class="order-summary">
+                    <div class="summary-heading">
+                        <span class="section-label">YOUR ORDER</span>
+                        <h2>Order Summary</h2>
+                    </div>
+                    <div id="paymentItems" class="payment-items">
+                        <div class="summary-loading">
+                            <i class="fa-solid fa-spinner fa-spin"></i>
+                            Loading order...
+                        </div>
+                    </div>
+                    <div class="summary-divider"></div>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <strong>₹<span id="subtotalAmount">0</span></strong>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <strong>₹<span id="shippingAmount">199</span></strong>
+                    </div>
+                    <div class="summary-divider"></div>
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <strong>₹<span id="totalAmount">0</span></strong>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <div id="page-footer"></div>
+
+    <script src="js/common.js"></script>
+    <script src="js/payment.js"></script>
+
+</body>
+</html>

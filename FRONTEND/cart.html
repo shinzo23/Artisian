@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisian</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+
+    <div id="navbar"></div>
+    <main class="cart-page">
+        <section class="cart-header">
+            <p class="section-label">
+                YOUR COLLECTION
+            </p>
+            <h1>
+                Shopping Cart
+            </h1>
+            <p>
+                Review your selected paintings before proceeding to payment.
+            </p>
+        </section>
+
+        <section class="cart-container">
+
+            <div class="cart-items-section">
+                <div class="cart-section-heading">
+                    <h2>
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Your Paintings
+                    </h2>
+                    <button id="clearCartButton" class="clear-cart-button" type="button">
+                        <i class="fa-solid fa-trash"></i>
+                        Clear Cart
+                    </button>
+
+                </div>
+
+                <div id="cartLoading" class="cart-message">
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+                    Loading your cart...
+                </div>
+
+                <div id="emptyCart" class="empty-cart hidden">
+                    <div class="empty-cart-icon">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                    <h2>
+                        Your cart is empty
+                    </h2>
+                    <p>
+                        Discover beautiful paintings and add your favourites to your collection.
+                    </p>
+                    <a href="./products.html" class="shop-button">
+                        <i class="fa-solid fa-palette"></i>
+                        Explore Paintings
+                    </a>
+                </div>
+                <div id="cartItemsContainer" class="cart-items-container">
+                </div>
+
+            </div>
+
+            <aside class="cart-summary">
+                <div class="summary-heading">
+                    <h2>
+                        Order Summary
+                    </h2>
+                </div>
+                <div class="summary-row">
+                    <span>
+                        Items
+                    </span>
+                    <strong id="totalItems">
+                        0
+                    </strong>
+                </div>
+                <div class="summary-row">
+                    <span>
+                        Subtotal
+                    </span>
+                    <strong id="subtotal">
+                        ₹0
+                    </strong>
+                </div>
+                <div class="summary-row">
+                    <span>
+                        Shipping
+                    </span>
+                    <strong id="shipping">
+                        ₹99
+                    </strong>
+                </div>
+                <div class="summary-divider"></div>
+                <div class="summary-total">
+                    <span>
+                        Total
+                    </span>
+                    <strong id="totalAmount">
+                        ₹99
+                    </strong>
+                </div>
+
+                <button id="checkoutButton" class="checkout-button" type="button">
+                    Proceed to Payment
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <a href="./products.html" class="continue-shopping">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Continue Shopping
+                </a>
+            </aside>
+        </section>
+    </main>
+
+    <div id="page-footer"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/cart.js"></script>
+
+</body>
+</html>

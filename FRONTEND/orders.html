@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Orders - Artisian</title>
+
+    <link rel="stylesheet" href="css/orders.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <div id="navbar"></div>
+
+
+    <main class="orders-page">
+
+        <section class="orders-container">
+
+            <!-- PAGE HEADER -->
+
+            <div class="orders-header">
+
+                <div class="header-icon">
+
+                    <i class="fa-solid fa-box-open"></i>
+
+                </div>
+
+                <div>
+
+                    <p class="section-label">
+                        ARTISIAN
+                    </p>
+
+                    <h1 class="myOrders">
+                        My Orders
+                    </h1>
+
+                    <p class="header-description">
+                        View your paintings and order details.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- MESSAGE -->
+
+            <div id="ordersMessage" class="orders-message">
+            </div>
+
+
+            <!-- LOADING -->
+
+            <div id="ordersLoading" class="orders-loading">
+
+                <i class="fa-solid fa-spinner fa-spin"></i>
+
+                <span>
+                    Loading your orders...
+                </span>
+
+            </div>
+
+
+            <!-- EMPTY -->
+
+            <div id="emptyOrders" class="empty-orders" style="display: none;">
+
+                <div class="empty-icon">
+
+                    <i class="fa-solid fa-box-open"></i>
+
+                </div>
+
+                <h2>
+                    No Orders Yet
+                </h2>
+
+                <p>
+                    You have not placed any orders yet.
+                </p>
+
+                <a href="products.html" class="shop-button">
+
+                    <i class="fa-solid fa-palette"></i>
+
+                    Explore Paintings
+
+                </a>
+
+            </div>
+
+
+            <!-- ORDERS -->
+
+            <div id="ordersList" class="orders-list">
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <div id="page-footer"></div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="./js/fetchNavFooter.js"></script>
+
+    <script src="./js/orders.js"></script>
+
+</body>
+
+</html>

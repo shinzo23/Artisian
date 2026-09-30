@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisian</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <div id="navbar"></div>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-small-title">
+                    <i class="fa-solid fa-palette"></i>
+                    THE ART OF EXPRESSION
+                </div>
+                <h1>Art That Tells <span>A Story</span></h1>
+                <p>Discover beautiful paintings inspired by culture, nature, spirituality and the timeless traditions of India.</p>
+                <div class="hero-buttons">
+                    <a href="./products.html" class="hero-button primary">
+                        <i class="fa-solid fa-palette"></i>
+                        Explore Paintings
+                    </a>
+                    <a href="#featuredPaintings" class="hero-button secondary">
+                        <i class="fa-solid fa-arrow-down"></i>
+                        Discover More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="intro-section">
+        <div class="intro-container">
+            <div class="intro-icon">
+                <i class="fa-solid fa-brush"></i>
+            </div>
+            <div class="intro-content">
+                <span class="section-label">WELCOME TO ARTISIAN</span>
+                <h2>Where Every Painting Has a Story</h2>
+                <p>
+                    Artisian brings together a collection of
+                    paintings inspired by India's rich artistic
+                    heritage. From traditional tribal artwork
+                    to spiritual masterpieces, discover art
+                    created to add character and emotion to
+                    your space.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories-section">
+        <div class="section-heading">
+            <span class="section-label">EXPLORE</span>
+            <h2>Browse By Category</h2>
+            <p>Explore paintings from different artistic traditions and themes.</p>
+        </div>
+        <div id="categoryCards" class="category-cards">
+            <div class="loading-message">
+                <i class="fa-solid fa-spinner fa-spin"></i>
+                Loading categories...
+            </div>
+        </div>
+    </section>
+
+    <section id="featuredPaintings" class="featured-section">
+        <div class="section-heading">
+            <span class="section-label">OUR COLLECTION</span>
+            <h2>Featured Paintings</h2>
+            <p>Discover some of the beautiful artworks available in our collection.</p>
+        </div>
+        <div id="featuredProducts" class="product-grid">
+            <div class="loading-message">
+                <i class="fa-solid fa-spinner fa-spin"></i>
+                Loading paintings...
+            </div>
+        </div>
+    </section>
+
+    <section class="why-section">
+        <div class="section-heading">
+            <span class="section-label">WHY ARTISIAN</span>
+            <h2>Art Worth Bringing Home</h2>
+        </div>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-icon">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
+                <h3>Unique Artwork</h3>
+                <p>Explore paintings inspired by different cultures, traditions and artistic styles.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </div>
+                <h3>Easy Shopping</h3>
+                <p>Browse artwork, add your favourites to the cart and place your order with ease.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">
+                    <i class="fa-solid fa-truck-fast"></i>
+                </div>
+                <h3>Simple Ordering</h3>
+                <p>A smooth shopping experience from discovering your painting to receiving your order.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">
+                    <i class="fa-solid fa-credit-card"></i>
+                </div>
+                <h3>Secure Payment</h3>
+                <p>Complete your painting purchase using our online card payment page.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="page-footer"></div>
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="js/index.js"></script>
+    <script src="./js/fetchNavFooter.js"></script>
+</body>
+</html>

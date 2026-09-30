@@ -1,0 +1,483 @@
+#navbar {
+    position: sticky;
+    top: sticky;
+    z-index: 1000;
+}
+
+.hero {
+    min-height: 610px;
+    position: relative;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.25)), url("../images/Madhubani.webp");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    width: 92%;
+    max-width: 1350px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    max-width: 650px;
+    padding: 70px 0;
+}
+
+.hero-small-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #d4af37;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero-small-title i {
+    font-size: 16px;
+}
+
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(48px, 6vw, 78px);
+    line-height: 1.05;
+    font-weight: normal;
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #d4af37;
+    font-style: italic;
+}
+
+.hero p {
+    max-width: 570px;
+    color: #d0d0d0;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 12px 21px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-button.primary {
+    background: #d4af37;
+    color: #080808;
+}
+
+.hero-button.primary:hover {
+    background: #e5c55a;
+    transform: translateY(-2px);
+}
+
+.hero-button.secondary {
+    border: 1px solid #8f7926;
+    color: #d4af37;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-button.secondary:hover {
+    background: #d4af37;
+    color: #080808;
+}
+
+.intro-section {
+    background: #111111;
+    border-bottom: 1px solid #2f2815;
+    padding: 40px 0;
+}
+
+.intro-container {
+    width: 86%;
+    max-width: 1050px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.intro-icon {
+    min-width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d4af37;
+    border-radius: 50%;
+    color: #d4af37;
+    font-size: 27px;
+}
+
+.intro-content {
+    max-width: 800px;
+}
+
+.section-label {
+    display: block;
+    color: #d4af37;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 9px;
+}
+
+.intro-content h2, .section-heading h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    font-weight: normal;
+    color: #f5f5f5;
+    margin-bottom: 14px;
+}
+
+.intro-content p {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 38px;
+}
+
+.section-heading p {
+    color: #888;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.categories-section {
+    width: 92%;
+    max-width: 1350px;
+    margin: auto;
+    padding: 5px 0;
+}
+
+.category-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.category-card {
+    min-height: 190px;
+    position: relative;
+    overflow: hidden;
+    background: #151515;
+    border: 1px solid #302915;
+    border-radius: 6px;
+    padding: 28px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: 0.3s;
+}
+
+.category-card:hover {
+    border-color: #d4af37;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.45);
+}
+
+.category-card-icon {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #5b4a1b;
+    border-radius: 50%;
+    color: #d4af37;
+    font-size: 19px;
+}
+
+.category-card h3 {
+    color: #f2f2f2;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-weight: normal;
+    margin-bottom: 7px;
+}
+
+.category-card p {
+    color: #777;
+    font-size: 12px;
+}
+
+.category-card-arrow {
+    position: absolute;
+    bottom: 24px;
+    right: 22px;
+    color: #d4af37;
+    font-size: 13px;
+}
+
+.featured-section {
+    background: #111111;
+    border-top: 1px solid #211c10;
+    border-bottom: 1px solid #211c10;
+    padding: 35px 4%;
+}
+
+.product-grid {
+    max-width: 1350px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.home-product-card {
+    background: #151515;
+    border: 1px solid #302915;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.home-product-card:hover {
+    border-color: #d4af37;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+}
+
+.product-image {
+    height: 270px;
+    position: relative;
+    overflow: hidden;
+    background: #0a0a0a;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s;
+}
+
+.home-product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-category {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    padding: 5px 8px;
+    background: rgba(0, 0, 0, 0.82);
+    border: 1px solid #5d4c1a;
+    color: #d4af37;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 3px;
+}
+
+.product-info {
+    padding: 18px;
+}
+
+.product-info h3 {
+    color: #eeeeee;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.35;
+    margin-bottom: 9px;
+}
+
+.product-description {
+    color: #777;
+    font-size: 12px;
+    line-height: 1.5;
+    height: 36px;
+    overflow: hidden;
+    margin-bottom: 13px;
+}
+
+
+.product-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.product-price {
+    color: #d4af37;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.product-view-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 11px;
+    background: transparent;
+    border: 1px solid #5d4c1a;
+    border-radius: 4px;
+    color: #d4af37;
+    font-size: 11px;
+    transition: 0.3s;
+}
+
+.product-view-button:hover {
+    background: #d4af37;
+    color: #080808;
+}
+
+.view-all-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 38px;
+}
+
+.view-all-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 20px;
+    border: 1px solid #d4af37;
+    color: #d4af37;
+    border-radius: 4px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.view-all-button:hover {
+    background: #d4af37;
+    color: #080808;
+}
+
+.why-section {
+    width: 92%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 5px 0;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.why-card {
+    padding: 27px 20px;
+    text-align: center;
+    background: #121212;
+    border: 1px solid #292313;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.why-card:hover {
+    border-color: #d4af37;
+}
+
+.why-icon {
+    width: 53px;
+    height: 53px;
+    margin: 0 auto 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #55461b;
+    border-radius: 50%;
+    color: #d4af37;
+    font-size: 19px;
+}
+
+.why-card h3 {
+    color: #eee;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    font-weight: normal;
+    margin-bottom: 9px;
+}
+
+.why-card p {
+    color: #777;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.home-cta {
+    background: linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)), url("../images/Tanjore.jpg");
+    background-size: cover;
+    background-position: center;
+    border-top: 1px solid #2f2815;
+    border-bottom: 1px solid #2f2815;
+    padding: 85px 20px;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 650px;
+    margin: auto;
+}
+
+.cta-content > i {
+    color: #d4af37;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.cta-content h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #fff;
+    font-size: 38px;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.cta-content p {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.loading-message {
+    grid-column: 1 / -1;
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #888;
+    font-size: 13px;
+}
+
+.loading-message i {
+    color: #d4af37;
+}

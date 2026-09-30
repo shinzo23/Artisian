@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisian</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/product-details.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <main class="product-details-page">
+        <div class="product-details-container">
+            <div class="breadcrumb">
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                </a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <a href="./products.html">Paintings</a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <span>Details</span>
+            </div>
+
+            <div id="productDetails" class="product-details-card">
+                <div class="loading-message">
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+                    <span>Loading painting details...</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="page-footer"></div>
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/fetchNavFooter.js"></script>
+    <script src="./js/product-details.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+.add-painting-section {
+max-width: 900px;
+}
+
+.painting-form-card {
+background: #ffffff;
+border: 1px solid #e1ddd5;
+border-radius: 6px;
+padding: 32px;
+max-width: 850px;
+}
+
+.form-row {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 22px;
+}
+
+.form-group {
+margin-bottom: 22px;
+}
+
+.form-group label {
+display: block;
+margin-bottom: 8px;
+color: #333333;
+font-size: 12px;
+font-weight: bold;
+letter-spacing: 0.3px;
+}
+
+.input-wrapper {
+position: relative;
+display: flex;
+align-items: center;
+}
+
+.input-wrapper > i {
+position: absolute;
+left: 15px;
+color: #a17e16;
+font-size: 13px;
+pointer-events: none;
+}
+
+.currency-symbol {
+position: absolute;
+left: 15px;
+color: #a17e16;
+font-size: 14px;
+font-weight: bold;
+pointer-events: none;
+}
+
+.input-wrapper input,
+.input-wrapper select {
+width: 100%;
+height: 48px;
+border: 1px solid #d2cdc4;
+background: #ffffff;
+color: #222222;
+border-radius: 4px;
+outline: none;
+padding: 0 15px 0 42px;
+font-family: Arial, sans-serif;
+font-size: 13px;
+transition: 0.2s ease;
+}
+
+.input-wrapper input::placeholder {
+color: #aaa49a;
+}
+
+.input-wrapper input:focus,
+.input-wrapper select:focus {
+border-color: #c9a227;
+box-shadow: 0 0 0 2px rgba(201, 162, 39, 0.12);
+}
+
+.select-wrapper select {
+appearance: auto;
+cursor: pointer;
+}
+
+.form-group textarea {
+width: 100%;
+min-height: 135px;
+resize: vertical;
+border: 1px solid #d2cdc4;
+background: #ffffff;
+color: #222222;
+border-radius: 4px;
+outline: none;
+padding: 14px 15px;
+font-family: Arial, sans-serif;
+font-size: 13px;
+line-height: 1.6;
+transition: 0.2s ease;
+}
+
+.form-group textarea::placeholder {
+color: #aaa49a;
+}
+
+.form-group textarea:focus {
+border-color: #c9a227;
+box-shadow: 0 0 0 2px rgba(201, 162, 39, 0.12);
+}
+
+.form-help {
+display: block;
+margin-top: 7px;
+color: #999999;
+font-size: 11px;
+line-height: 1.5;
+}
+
+.character-count {
+text-align: right;
+color: #999999;
+font-size: 10px;
+margin-top: 5px;
+}
+
+.character-count span {
+color: #9b7a15;
+font-weight: bold;
+}
+
+.form-message {
+display: none;
+padding: 13px 15px;
+border-radius: 4px;
+margin-bottom: 20px;
+font-size: 12px;
+line-height: 1.5;
+}
+
+.form-message.success {
+display: block;
+background: #edf7ef;
+border: 1px solid #c7dfcb;
+color: #2d6b36;
+}
+
+.form-message.error {
+display: block;
+background: #fff0f0;
+border: 1px solid #e4c4c4;
+color: #8b2d2d;
+}
+
+.form-buttons {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 15px;
+padding-top: 8px;
+border-top: 1px solid #ece8e1;
+}
+
+.cancel-button,
+.save-button {
+min-height: 45px;
+padding: 0 20px;
+border-radius: 4px;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+font-family: Arial, sans-serif;
+font-size: 12px;
+font-weight: bold;
+cursor: pointer;
+text-decoration: none;
+transition: 0.2s ease;
+}
+
+.cancel-button {
+border: 1px solid #d1ccc2;
+background: #ffffff;
+color: #555555;
+}
+
+.cancel-button:hover {
+border-color: #999999;
+background: #f7f5f1;
+color: #222222;
+}
+
+.save-button {
+border: 1px solid #111111;
+background: #111111;
+color: #c9a227;
+}
+
+.save-button:hover {
+background: #c9a227;
+border-color: #c9a227;
+color: #111111;
+}
+
+.save-button:disabled {
+opacity: 0.6;
+cursor: not-allowed;
+}

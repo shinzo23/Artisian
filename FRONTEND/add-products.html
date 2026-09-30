@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisian</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="./css/add-products.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+        <div class="admin-logo">
+            <i class="fa-solid fa-palette"></i>
+            <span>ARTISIAN</span>
+        </div>
+
+        <div class="admin-role">
+            <i class="fa-solid fa-user-shield"></i>
+            <span>Administrator</span>
+        </div>
+
+        <nav class="admin-nav">
+
+            <a href="./admin-dashboard.html" class="admin-nav-link">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="./admin-dashboard.html" class="admin-nav-link">
+                <i class="fa-solid fa-paintbrush"></i>
+                <span>Products</span>
+            </a>
+
+            <a href="admin-dashboard.html" class="admin-nav-link">
+                <i class="fa-solid fa-box"></i>
+                <span>Orders</span>
+            </a>
+
+            <a href="admin-dashboard.html" class="admin-nav-link">
+                <i class="fa-solid fa-users"></i>
+                <span>Users</span>
+            </a>
+
+            <a href="./add-products.html" class="admin-nav-link active">
+                <i class="fa-solid fa-plus"></i>
+                <span>Add Painting</span>
+            </a>
+
+            <a href="./index.html" class="admin-nav-link">
+                <i class="fa-solid fa-store"></i>
+                <span>Back to Store</span>
+            </a>
+
+        </nav>
+
+        <button id="logoutButton" class="admin-logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Sign Out</span>
+        </button>
+
+    </aside>
+
+    <main class="admin-main">
+        <header class="admin-header">
+            <div>
+                <p class="admin-header-label">PRODUCT ENTRY</p>
+                <h1>Add Painting</h1>
+            </div>
+            <div class="admin-profile">
+                <div class="admin-profile-icon">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <div>
+                    <span>Welcome</span>
+                    <strong id="adminName">Administrator</strong>
+                </div>
+            </div>
+        </header>
+
+        <section class="add-painting-section">
+            <div class="section-heading">
+                <p>NEW PRODUCT</p>
+                <h2>Painting Information</h2>
+            </div>
+
+            <div class="painting-form-card">
+                <form id="paintingForm">
+                    <div class="form-group">
+                        <label for="productName">
+                            Painting Name
+                        </label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-paintbrush"></i>
+                            <input type="text" id="productName" name="productName" placeholder="Enter painting name" maxlength="100" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="productPrice">
+                                Price
+                            </label>
+                            <div class="input-wrapper">
+                                <span class="currency-symbol">₹</span>
+                                <input type="number" id="productPrice" name="productPrice" placeholder="Enter price" min="1" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="productQuantity">
+                                Stock Quantity
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="fa-solid fa-boxes-stacked"></i>
+                                <input type="number" id="productQuantity" name="productQuantity" placeholder="Enter stock quantity" min="0" required>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+
+                        <label for="productCategory">
+                            Category
+                        </label>
+                        <div class="input-wrapper select-wrapper">
+                            <i class="fa-solid fa-layer-group"></i>
+                            <select id="productCategory" name="productCategory" required>
+                                <option value="">
+                                    -- Select Category --
+                                </option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+
+                        <label for="productImage">
+                            Image Path
+                        </label>
+
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-image"></i>
+                            <input type="text" id="productImage" name="productImage" placeholder="Example: images/painting.jpg" maxlength="500" required>
+                        </div>
+                        <small class="form-help">
+                            Enter the image path relative to the Artisian website folder.
+                        </small>
+
+                    </div>
+                    <div class="form-group">
+
+                        <label for="productDescription">
+                            Description
+                        </label>
+
+                        <textarea id="productDescription" name="productDescription" maxlength="500"
+                            placeholder="Enter painting description" required></textarea>
+
+                        <div class="character-count">
+                            <span id="descriptionCount">0</span>/500
+                        </div>
+
+                    </div>
+
+                    <div id="formMessage" class="form-message">
+                    </div>
+
+                    <div class="form-buttons">
+                        <a href="admin-dashboard.html" class="cancel-button">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            Back to Dashboard
+                        </a>
+                        <button type="submit" class="save-button">
+                            <i class="fa-solid fa-plus"></i>
+                            Add Painting
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./js/add-products.js"></script>
+
+</body>
+
+</html>

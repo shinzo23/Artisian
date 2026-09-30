@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paintings - Artisian</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/products.css">
+</head>
+<body>
+
+    <!-- ! Navbar -->
+    <div id="navbar"></div>
+
+    <main class="paintings-page">
+        <section class="paintings-header">
+            <div class="header-icon">
+                <i class="fa-solid fa-palette"></i>
+            </div>
+            <div>
+                <span class="page-label">ARTISIAN COLLECTION</span>
+                <h1>Paintings</h1>
+                <p>Explore our collection of traditional and artistic paintings.</p>
+            </div>
+        </section>
+
+        <section class="category-filter-section">
+            <div class="filter-heading">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Browse Categories</span>
+            </div>
+            <div id="categoryFilters" class="category-filters">
+                <button class="category-filter active" data-category="0">
+                    <i class="fa-solid fa-border-all"></i>
+                    <span>All Paintings</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="products-toolbar">
+            <div class="result-info">
+                <span id="selectedCategory">All Paintings</span>
+                <span class="result-separator">•</span>
+                <span id="productCount">0 Paintings</span>
+            </div>
+
+            <div class="sort-box">
+                <label for="sortProducts">
+                    <i class="fa-solid fa-arrow-down-wide-short"></i>
+                </label>
+                <select id="sortProducts">
+                    <option value="default">Sort: Default</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                    <option value="name">Name: A to Z</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <div id="productsContainer" class="products-grid">
+                <div class="loading-message">
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+                    <span>Loading paintings...</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ! Footer -->
+    <div id="page-footer"></div>
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/fetchNavFooter.js"></script>
+    <script src="./js/products.js"></script>
+
+</body>
+</html>
